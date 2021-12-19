@@ -31,6 +31,7 @@
 //#define LOG_NDEBUG 0
 
 #include <stdlib.h>
+#include <fcntl.h>
 #include <utils/Log.h>
 #include <utils/Errors.h>
 #include <hardware/camera.h>
