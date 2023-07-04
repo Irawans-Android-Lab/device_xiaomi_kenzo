@@ -34,7 +34,7 @@ LOCAL_SRC_FILES += \
         HAL/QCameraParameters.cpp \
         HAL/QCameraThermalAdapter.cpp
 
-LOCAL_CFLAGS := -Wall -Wextra -Werror -Wno-error -Wformat
+LOCAL_CFLAGS := -Wall -Wextra -Werror -Wno-error -Wformat -Wno-unreachable-code-loop-increment
 LOCAL_CFLAGS += -DHAS_MULTIMEDIA_HINTS
 LOCAL_CFLAGS += -Wno-unused-variable -Wno-unused-parameter -DVANILLA_HAL
 
