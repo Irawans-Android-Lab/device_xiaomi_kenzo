@@ -92,7 +92,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
     android.hardware.soundtrigger@2.2-impl \
-    android.hardware.soundtrigger@2.2-service \
     audio.primary.msm8952 \
     audio.r_submix.default \
     audio.usb.default \
@@ -144,7 +143,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.0-impl \
     audio.bluetooth.default \
-    libldacBT_bco \
     vendor.qti.hardware.bluetooth_audio@2.0 \
     vendor.qti.hardware.btconfigstore@1.0
 
@@ -156,7 +154,7 @@ PRODUCT_PACKAGES += \
     camera.msm8952 \
     libqomx_core \
     vendor.qti.hardware.camera.device@1.0 \
-    vendor.qti.hardware.camera.device@1.0_vendor
+    vendor.qti.hardware.camera.device@1.0.vendor
 
 # Component overrides
 PRODUCT_COPY_FILES += \
@@ -194,9 +192,8 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libqdMetaData \
     libqdMetaData.system \
-    libgenlock \
     vendor.display.config@1.0 \
-    vendor.display.config@1.0_vendor
+    vendor.display.config@1.0.vendor
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -204,13 +201,8 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service \
     android.hardware.drm-service.clearkey
 
-#Face  detection extension
-PRODUCT_PACKAGES += \
-    org.codeaurora.camera
-
 # Fingerprint
 PRODUCT_PACKAGES += \
-    fingerprint.msm8952 \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_kenzo
 
 # Filesystem tools
@@ -288,12 +280,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
 
-# IPv6
-PRODUCT_PACKAGES += \
-    ebtables \
-    ethertypes \
-    libebtc
-
 # IRQ
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance_little_big.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance_little_big.conf
@@ -327,14 +313,11 @@ PRODUCT_PACKAGES += \
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
-    libextmedia_jni \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
     libOmxEvrcEnc \
-    libOmxG711Enc \
     libOmxQcelp13Enc \
-    libOmxSwVencHevc \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw
@@ -492,8 +475,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     libcld80211 \
-    libqsap_sdk \
-    libQWiFiSoftApCfg \
     libwpa_client \
     hostapd \
     wificond \
